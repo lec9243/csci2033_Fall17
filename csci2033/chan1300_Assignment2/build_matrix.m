@@ -1,0 +1,20 @@
+function A = build_matrix()
+A_temp = eye(8,8);
+e1 = [1;0;0;0;0;0;0;0];
+A_temp(:,1) = get_forces(e1);
+e2 = [0;1;0;0;0;0;0;0];
+A_temp(:,2) = get_forces(e2);
+e3 = [0;0;1;0;0;0;0;0];
+A_temp(:,3) = get_forces(e3);
+e4 = [0;0;0;1;0;0;0;0];
+A_temp(:,4) = get_forces(e4);
+e5 = [0;0;0;0;1;0;0;0];
+A_temp(:,5) = get_forces(e5);
+e6 = [0;0;0;0;0;1;0;0];
+A_temp(:,6) = get_forces(e6);
+e7 = [0;0;0;0;0;0;1;0];
+A_temp(:,7) = get_forces(e7);
+e8 = [0;0;0;0;0;0;0;1];
+A_temp(:,8) = get_forces(e8);
+A = A_temp;
+end
